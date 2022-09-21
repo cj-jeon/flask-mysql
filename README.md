@@ -20,6 +20,19 @@ flaskmysql_db_1    docker-entrypoint.sh mysqld   Up      0.0.0.0:3306->3306/tcp,
 
 # cul http://localhost:8080/
 
-# curl http://localhost:8080/getdata
+# curl -s http://localhost:8080/users -X GET  | jq .
+{
+  "test_table": [
+    {
+      "001": "scott"
+    },
+    {
+      "002": "tiger"
+    },
+    {
+      "003": "artemis"
+    }
+  ]
+}
 
 ```
